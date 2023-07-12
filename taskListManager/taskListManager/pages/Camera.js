@@ -10,7 +10,7 @@ const CameraScreen = () => {
 
   React.useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await requestCameraPermissionsAsync();
       setHasPermission(status === 'granted');
     })();
   }, []);
